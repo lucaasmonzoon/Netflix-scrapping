@@ -4,7 +4,7 @@ import requests
 import sys
 sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
-r=requests.get("https://www.netflix.com/ar/title/70143836")
+r=requests.get("https://www.netflix.com/ar-en/title/70143836")
 soup=BeautifulSoup(r.text,features="html.parser")
 
 name=soup.find("h1",{"class":"title-title"}).text
